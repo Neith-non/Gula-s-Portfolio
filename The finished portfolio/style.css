@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    display: flex;
+    margin-top: 20px;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: #414441aa;
+    filter: drop-shadow(10px);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.name{
+    font-size: 3rem;
+    color: red;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.name:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3 ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover, nav a:active{
+    color: green;
+    border-bottom: 3px solid green;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: #c02e2e;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-img{
+    border-radius: 25%;
+}
+
+.home-img img{
+    position: relative;
+    width: 30vw;
+    height: 55rem;
+    border-radius: 50%;
+    box-shadow: 0 0 25px red;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    transform: scale(1.05);
+}
+
+.say {
+    font-size: 3.4rem;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+p{
+    font-size: 2rem;
+    min-width: 150px;
+}
+
+h2{
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.skill-container,
+.education-container,
+.contact-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: column;
+    gap: 2rem;
+}
+
+.skill-category,
+.education-item,
+.contact-item{
+    background-color: #414441aa;
+    padding: 3rem;
+    border-radius: 2rem;
+    transition: 0.5s ease;
+}
+
+.skill-category:hover,
+.education-item:hover,
+.contact-item:hover{
+    transform: scale(1.05);
+}
+
+ul{
+    list-style: none;
+    font-size: 1.8rem;
+}
+
+ul li{
+    margin-bottom: 1rem;
+}
+
+footer{
+    background-color: #2a2b2a;
+    padding: 5rem 9% 5rem;
+    min-height: auto;
+}
+
+footer h2{
+    margin-bottom: 3rem;
+}
+
+.contact-item p,
+.contact-item a{
+    font-size: 1.8rem;
+    color: white;
+}
+
+.contact-item a:hover{
+    color: green;
+}
+
+@media (max-width: 768px){
+    .skill-container,
+    .education-container,
+    .contact-container{
+        grid-template-columns: 1fr;
+    }
+
+    .home{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+}
